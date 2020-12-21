@@ -1,0 +1,18 @@
+
+# Requires python>=3.7
+
+chess>=1.3.*
+
+# The stockfish binary in this repo only works on x64 Linux, 
+# so to get it to work on another operating system would require 
+# building the stockfish binary for that system and replacing it 
+# in this directory. For the display of the board to work, the 
+# Inkscape CLI must be installed and added to path. 
+# ("sudo apt install inkscape" on Debian Linux)
+
+# Also, in pychess.py (in the display if-block in the game()
+# function), for non-*nix systems (basically just Windows),
+# the subprocess.run call won't run. Just remove the function
+# call, as it isn't strictly necessary to convert the SVG to 
+# PNG, it's just that most systems don't have a convenient 
+# native SVG viewer.
